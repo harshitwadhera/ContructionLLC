@@ -1,1 +1,83 @@
 @import "../../../../../node_modules/bootstrap/dist/css/bootstrap.css";
+html,
+body,
+header,
+.view {
+  height: 100%;
+}
+
+@media (max-width: 740px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 100vh;
+  }
+}
+
+.top-nav-collapse {
+  background-color: #78909c !important;
+}
+
+.navbar:not(.top-nav-collapse) {
+  background: transparent !important;
+}
+
+@media (max-width: 991px) {
+  .navbar:not(.top-nav-collapse) {
+    background: #78909c !important;
+  }
+}
+
+h1 {
+  letter-spacing: 8px;
+}
+
+h5 {
+  letter-spacing: 3px;
+}
+
+
+.hr-light {
+  border-top: 3px solid #fff;
+  width: 80px;
+}
+
+.WhatWeDo {
+  background-size: 100% 100%;
+  background-image: url('../../../../assets/images/Home/Home5.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding-top:100px;
+  padding-bottom:100px;
+}
+
+
+@keyframes fadeInDown {
+  from {
+      opacity:0;
+      -webkit-transform: translatey(-10px);
+      -moz-transform: translatey(-10px);
+      -o-transform: translatey(-10px);
+      transform: translatey(-10px);
+  }
+  to {
+      opacity:1;
+      -webkit-transform: translatey(0);
+      -moz-transform: translatey(0);
+      -o-transform: translatey(0);
+      transform: translatey(0);
+  }
+}
+
+
+.w3-animate-top{
+  position:relative;
+  animation:animatetop 3s
+}
+@keyframes animatetop{from{top:-300px;opacity:0} to{top:0;opacity:1}}
+
+.upgrade{
+  color: floralwhite;
+}
+
