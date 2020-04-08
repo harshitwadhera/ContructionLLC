@@ -1,4 +1,4 @@
-import { Component, OnInit ,Renderer} from '@angular/core';
+import { Component, OnInit ,Renderer, HostListener, ElementRef, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,24 +6,54 @@ import { Component, OnInit ,Renderer} from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
+  topPosToStartShowing = 100;
   constructor(private render:Renderer) { }
+  
+ 
 
   ngOnInit() {
     //console.log("test");
   }
   clicked(event) {
-     console.log("test on clicked");
+    
      let element = document.getElementsByClassName('upgrade')
+     
      if(element[0].className.substring(0,element[0].className.lastIndexOf("w3-animate-top"))){
-      element[0].className = element[0].className.substring(0,element[0].className.lastIndexOf("w3-animate-top"));
-      element[0].className=element[0].className+" w3-animate-top";
-      this.render.setElementAttribute(event.target, "class", element[0].className);
+      // element[0].className = element[0].className.substring(0,element[0].className.lastIndexOf("w3-animate-top"));
+      // element[0].className=element[0].className+;"w3-animate-top";
+      //element[0].classList.remove("w3-animate-top");
+      element[0].classList.add("w3-animate-top");
+      //this.render.setElementAttribute(event.target, "class", element[0].className);
      }else{
-      element[0].className=element[0].className+" w3-animate-top";
+      element[0].classList.add("w3-animate-top");
+     // element[0].className=element[0].className+" w3-animate-top";
      }
      
 
   }
+
+  scrollToElement($element): void {
+    console.log($element);
+   // const element = document.querySelector("aboutUs")
+   
+    let element = document.getElementsByClassName('aboutUs')
+    element[0].scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+  }
+
+  @HostListener("window:scroll")
+  checkScroll() {
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    let element = document.getElementsByName('navBar')
+    if (scrollPosition >= this.topPosToStartShowing) {
+      element[0].classList.add("fixed-top");// .className+" fixed-top";
+      
+    } else {
+     element[0].classList.remove("fixed-top");//.className=element[0].className+" fixed-top";
+    }
+    
+  
+   
+  }
+  
 
 }

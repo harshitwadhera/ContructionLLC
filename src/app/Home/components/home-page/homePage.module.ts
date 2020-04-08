@@ -7,6 +7,12 @@ import { HeaderModule } from 'src/app/common/components/header/header.module';
 import { FooterModule } from 'src/app/common/components/footer/footer.module';
 import { CustFeebackModule } from '../cust-feedback/cust-feedback.module';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { ProjectsComponent } from '../projects/projects.component';
+import { HomeRoutingModule } from './homePage-routing.module';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { homeEffects } from '../../effects/home.effects';
+import { reducer } from '../../Reducers/home.reducer';
 
 
 @NgModule({
@@ -18,8 +24,12 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     HeaderModule,
     FooterModule,
     CustFeebackModule,
-    SlickCarouselModule
- 
+    SlickCarouselModule,
+    HomeRoutingModule,
+    StoreModule.forRoot(reducer),
+    EffectsModule.forRoot([
+      homeEffects
+    ]) 
   ],
   exports: [
     HomePageComponent
