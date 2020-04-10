@@ -23,7 +23,18 @@ const routes: Routes = [
  // { path: 'home',  loadChildren: './Home/components/home-page/homePage.module#HomePageModule'
  
 
-},//C:\Users\h\harshitWork\dev\ContructionLLC\src\app\Home\components\projects
+},
+{ path: 'ContructionLLC', component: HomePageComponent,
+  children: [
+    {
+      path: 'dialog',
+      component: CustFeedbackComponent
+    }]   // loadChildren: './Home/components/home-page/homePage.module#HomePageModule'
+ // { path: 'home',  loadChildren: './Home/components/home-page/homePage.module#HomePageModule'
+ 
+
+},
+//C:\Users\h\harshitWork\dev\ContructionLLC\src\app\Home\components\projects
 //{ path:'projects',loadChildren: () => import('./Home/components/projects/projects.module').then(c => c.ProjectsModule)},
   
 ];
