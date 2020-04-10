@@ -15,6 +15,7 @@ import { StoreModule } from '@ngrx/store';
 import { homeService } from './Home/Service/home.service';
 import { EffectsModule } from '@ngrx/effects';
 import { homeEffects } from './Home/effects/home.effects';
+
 export function clearState(reducer){
   return function (state,action){
     //if(action.type == LOGOUT_S)

@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "aot": true,
             "outputPath": "dist/contructionLLC",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -33,7 +34,7 @@
               "./node_modules/jquery/dist/jquery.min.js",
               "./node_modules/popper.js/dist/umd/popper.js",
               "./node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "./node_modules/slick-carousel/slick/slick.min.js",
+              "./node_modules/slick-carousel/slick/slick.min.js"
             ]
           },
           "configurations": {
@@ -58,6 +59,10 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
               ]
             }
@@ -129,7 +134,7 @@
   "defaultProject": "contructionLLC",
   "schematics": {
     "@schematics/angular:component": {
-      "styleext": "scss"
+      "style": "scss"
     }
   }
 }

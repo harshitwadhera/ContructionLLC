@@ -1,5 +1,61 @@
 
 <app-header></app-header>
-<p>projects works!</p>
+<!-- <div style="padding: 40px 40px 40px 40px;">
+<div class="row">
+  <div class="col-md-4">
+   
+    <div class="card" style="width: 20rem;">
+        <img class="card-img-top" src="../../../../assets/images/Projects/tiles.jpg"  alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Tiles Work in Fujairah office</h5>
+          <p class="card-text">We have done a very quick work on the tiles of House. We have done a very quick work on the tiles of House. We have done a very quick work on the tiles of House. We have done a very quick work on the tiles of House.</p>
+        </div>
+      </div>
+   
+  </div>
+    <div class="col-md-4">
+    <div class="card" style="width: 20rem;">
+        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/People/6-col/img%20%283%29.jpg" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Tiles Work in Fujairah office</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+  </div>
+</div>
+</div> -->
+
+<div style="padding: 40px 40px 40px 40px;">
+<div class="card-deck">
+    <div class="card" style="width: 20rem;">
+        <img class="card-img-top" src="../../../../assets/images/Projects/tiles.jpg" (click)="openModal($event);"  alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title font-weight-bold">Tiles Work in Fujairah office</h5>
+          <p class="card-text">We have done a very quick work on the tiles of House which all near to shopping complex. We have done a very quick work on the tiles of House. We have done a very quick work on the tiles of House. We have done a very quick work on the tiles of House.</p>
+        </div>
+      </div>
+      <div class="card" style="width: 20rem;">
+        <img class="card-img-top" src="../../../../assets/images/Projects/glass.jpg" (click)="openModal($event);"   alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title font-weight-bold">Glass work in whole Builder</h5>
+          <p class="card-text">we have done whole glass work on the building with best finish. We are very happy to get a very positive feedbak from our client.</p>
+        </div>
+      </div>
+    <div class="card">
+      <img class="card-img-top" src="../../../../assets/images/Projects/paint.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title font-weight-bold">Paint Work Which is Still in process</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="myModal" class="modal"  [style.display]="showModal ? 'block' : 'none'">
+    <span class="close" (click) = "hide()">&times;</span>
+    <img class="modal-content" src="{{src}}" id="img01">
+    <div id="caption"></div>
+  </div>
 
 <app-footer></app-footer>

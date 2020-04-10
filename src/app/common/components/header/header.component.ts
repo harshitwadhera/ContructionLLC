@@ -1,4 +1,4 @@
-import { Component, OnInit ,Renderer, HostListener, ElementRef, ViewChild} from '@angular/core';
+import { Component, OnInit, HostListener, ElementRef, ViewChild, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +7,7 @@ import { Component, OnInit ,Renderer, HostListener, ElementRef, ViewChild} from 
 })
 export class HeaderComponent implements OnInit {
   topPosToStartShowing = 100;
-  constructor(private render:Renderer) { }
+  constructor(private render:Renderer2) { }
   
  
 

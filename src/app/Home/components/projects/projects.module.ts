@@ -11,6 +11,7 @@ import { reducer } from '../../reducers/home.reducer';
 import { StoreModule } from '@ngrx/store';
 import { homeService } from '../../Service/home.service';
 
+
 @NgModule({
   declarations: [ProjectsComponent],
   imports: [
@@ -21,7 +22,8 @@ import { homeService } from '../../Service/home.service';
     StoreModule.forRoot(reducer),
     EffectsModule.forRoot([
       homeEffects
-    ])
+    ]),
+
   ],
   exports:[
     ProjectsComponent
