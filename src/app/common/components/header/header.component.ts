@@ -45,10 +45,10 @@ export class HeaderComponent implements OnInit {
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
     let element = document.getElementsByName('navBar')
     if (scrollPosition >= this.topPosToStartShowing) {
-      element[0].classList.add("fixed-top");// .className+" fixed-top";
+    //  element[0].classList.add("fixed-top");// .className+" fixed-top";
       
     } else {
-     element[0].classList.remove("fixed-top");//.className=element[0].className+" fixed-top";
+    // element[0].classList.remove("fixed-top");//.className=element[0].className+" fixed-top";
     }
     
   
