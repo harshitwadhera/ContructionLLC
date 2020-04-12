@@ -90,3 +90,15 @@ h5 {
   color: black;
 }
 
+.contentInCenter {
+ 
+  padding: 120px 20px 20px 20px; 
+}
+
+@media only screen and (max-width: 700px){
+  .contentInCenter {
+    padding: 20px 20px 20px 20px; 
+  }
+
+}
+
