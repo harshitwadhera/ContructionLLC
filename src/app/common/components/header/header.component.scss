@@ -17,11 +17,29 @@ header {
     background-attachment: fixed;
 }
 
+.row {
+    max-width: 100%;
+    margin: 0 0 0 6%;
+    display: block;
+}
+.navbar{
+    display: block;
+}
+
+.navbar-toggler{
+    background-color: white;
+    border-color: black;
+    float: right;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
 .hero-text-box {
     position: absolute;
-    width: 1140px;
+    width: 100%;
     top: 50%;
     left: 50%;
+    padding-left: 6%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -33,6 +51,11 @@ header {
     float: left;
    padding-top: 20px;
 }
+
+.topnav-right {
+    float: right;
+    margin-right: 10%;
+  }
 
 .logo-black { 
     display: none;
@@ -155,11 +178,7 @@ input[type=submit]:active {
 
 
 
-.row {
-    max-width: 1140px;
-    margin: 0 auto;
-    display: block;
-}
+
 
 section {
     padding: 80px 0;
@@ -173,7 +192,7 @@ section {
 h1,
 h2,
 h3 {
-    font-weight: 300;
+    
     text-transform: uppercase;
 }
 
@@ -227,9 +246,39 @@ body {
     background-color: #fff;
     color: #555;
     font-family: 'Lato', 'Arial', sans-serif;
-    font-weight: 300;
+   
     font-size: 20px;
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
 }
+
+
+@media only screen and (max-width: 750px){
+    .logo {
+        height: 80px;
+        width: auto;
+        float: left;
+       padding-top: 20px;
+    }
+
+    .navbar-toggler{
+        
+        float: right;
+        margin: 30px 0px 0px 15px;
+        cursor: pointer;
+    }
+
+    .hero-text-box {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+       
+        padding: 50% 0 0 10%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+  
+  }
 
