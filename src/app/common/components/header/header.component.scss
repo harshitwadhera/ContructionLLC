@@ -254,6 +254,13 @@ body {
 
 
 @media only screen and (max-width: 750px){
+
+    html,
+    body {
+   
+        font-size:inherit;
+    
+    }
     .logo {
         height: 80px;
         width: auto;
