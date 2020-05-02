@@ -32,6 +32,7 @@
 
 
 </div> -->
+<section>
 <div >
 <div #aboutUs id="aboutUs" class="container-fluid text-center aboutUs" style="padding-top:100px;padding-bottom:100px">
   <h1>WHO WE ARE</h1>
@@ -40,6 +41,7 @@
   
 </div>
 </div>
+</section>
 <!-- <div id="WhatWeDo" class="container-fluid " style="padding-top:70px;padding-bottom:70px">
   <h1 class="display-4 text-center">ARE YOU PLANNING TO UPGRADE YOUR HOME,OFFICE</h1>
   <p>{{moreAbout}}</p>
@@ -70,7 +72,7 @@
   </div>
   </div> -->
 
- 
+  <section>
   <div id="WhatWeDo" class="view" class=""  >
   <div class="container">
     <div class="row">
@@ -87,8 +89,8 @@
           
           </div>
           <div class="row">
-            <div class="col">
-            <a (click)="openDialog()" class="btn btn-outline-white text-black wow fadeInDown" mat-raised-button routerLink="dialog" style="float: left;cursor: pointer;" data-wow-delay="0.4s">
+            <div class="col"><!--(click)="openDialog()"-->
+            <a  href="#Customers-Testimoni" class="btn btn-outline-white text-black wow fadeInDown" mat-raised-button  style="float: left;cursor: pointer;" data-wow-delay="0.4s">
               <strong>Customers</strong></a>
               </div>
               <div class="col">
@@ -101,14 +103,89 @@
   
     </div>
   </div>
-
+</section>
   <!-- <app-cust-feedback id="custom-modal-1">
     <h1>A Custom Modal!</h1>
     <p>Home page text: <input type="text" [(ngModel)]="bodyText" /></p>
     <button (click)="closeModal('custom-modal-1');">Close</button>
 </app-cust-feedback> -->
-  
+ 
+<section class="Customers-Testimoni"  id="Customers-Testimoni">
+  <div class="container">
+    <div class="row customer-testi-Header">
+      <h2>Our Happy Customers</h2>
+    </div>
+    <div class="row">
+      <div class="col-sm">
+        <blockquote>
+          <i class="fa fa-quote-left"></i> I am very satisfied with the service they provide and the best part is they also give solution to problems.
+          <i class="fa fa-quote-right"></i>
 
+        </blockquote>
+        <div class="cite">
+          <i class="fa fa-user-circle"></i>
+          <title class="customer-name">Albert</title>
+          
+
+        </div>
+      </div>
+      <div class="col-sm">
+        <blockquote>
+          <i class="fa fa-quote-left"></i> This makes it fair and transparent for both kinds of "customers," and these ratings affect the drivers' and passengers' reputation as well. If a passenger has a lower rating, the driver has the authority to decline the booking.
+          <i class="fa fa-quote-right"></i>
+
+        </blockquote>
+        <div class="cite ">
+          <i class="fa fa-user-circle"></i>
+          <title class="customer-name">Amir</title>
+         
+
+        </div>
+      </div>
+      <div class="col-sm">
+        <blockquote>
+          <i class="fa fa-quote-left"></i> This makes it fair and transparent for both kinds of "customers," and these ratings affect the drivers' and passengers' reputation as well. If a passenger has a lower rating, the driver has the authority to decline the booking.
+          <i class="fa fa-quote-right"></i>
+
+        </blockquote>
+        <div class="cite">
+          <i class="fa fa-user-circle"></i>
+          <title class="customer-name">Saif</title>
+         
+
+        </div>
+       
+
+      </div>
+    </div>
+    </div>
+
+</section>
+
+<!-- <section class="Customers-Testimoni">
+
+  <div class="row customer-testi-Header">
+    <h2>Our Happy Customers</h2>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <blockquote>
+          <i class="fas fa-quote-left"></i> I am very satisfied with the service they provide and the best part is they also give solution to problems.
+
+        </blockquote>
+        <title>Albert</title>
+      </div>
+      <div class="col-sm">
+        One of three columns
+      </div>
+      <div class="col-sm">
+        One of three columns
+      </div>
+    </div>
+  </div>
+
+</section>  -->
 
 <app-footer></app-footer>
 </body>

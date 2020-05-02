@@ -90,10 +90,63 @@ h5 {
   color: black;
 }
 
+
 .contentInCenter {
  
   padding: 120px 20px 20px 20px; 
 }
+
+/* ---------------
+Customers testimonial Section
+
+*/
+
+.Customers-Testimoni{
+  background-image:url(../../../../assets/images/Home/CustomerFeedback.jpg);
+  background-size: cover;
+  color: #fff;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+.customer-testi-Header{
+  justify-content: center;
+  padding: 10% 0 10% 0;
+}
+
+.customer-testi-Header:h2{
+  text-align: center;
+}
+
+.customer-name{
+  display: block;
+}
+
+blockquote{
+  padding: 2%;
+  font-style: italic;
+  line-height: 145%;
+  font-size: large;
+}
+
+.cite{
+display: flex;
+margin-top: 2%;
+
+}
+.cite i{
+  float: left;
+font-size: 50px;
+}
+
+.customer-name{
+  vertical-align: middle;
+  margin: 12px;
+  font-weight: bold;
+  font-size: 140%;
+}
+
+
 
 @media only screen and (max-width: 700px){
   .contentInCenter {
@@ -101,4 +154,6 @@ h5 {
   }
 
 }
+
+
 
