@@ -181,4 +181,36 @@ font-size: 50px;
   background-attachment: fixed;
   height: 80vh;
 }
+
+.location{
+  color: green;
+    font-size: xxx-large;
+    float: left;
+    
+}
+
+.contactdetails div{
+ 
+  display: block;
+}
+
+.rowInContactUs{
+  padding: 20px 0;
+}
+
+.textInContactUs{
+  justify-content: center;
+  padding: 5% 0px 10px 25%;
+}
+
+.note{
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  top: 0;
+  padding:35%;
+ 
+ // max-width: 360px;
+ 
+}
  
