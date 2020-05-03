@@ -13,6 +13,9 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { homeEffects } from '../../effects/home.effects';
 import { reducer } from '../../Reducers/home.reducer';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ProjectsModule } from '../projects/projects.module';
+
 
 
 @NgModule({
@@ -29,7 +32,8 @@ import { reducer } from '../../Reducers/home.reducer';
     StoreModule.forRoot(reducer),
     EffectsModule.forRoot([
       homeEffects
-    ]) 
+    ]),
+    ReactiveFormsModule 
   ],
   exports: [
     HomePageComponent

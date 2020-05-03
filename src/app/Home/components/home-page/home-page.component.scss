@@ -131,7 +131,7 @@ Customers testimonial Section
   padding: 10% 0 10% 0;
 }
 
-.customer-testi-Header:h2{
+.customer-testi-Header h2{
   text-align: center;
 }
 
@@ -173,4 +173,12 @@ font-size: 50px;
 }
 
 
-
+/* Contact US section  */
+.contactdetails{
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../../../../assets/images/Home/map.jpg);
+  background-size: auto;
+  color: #fff;
+  background-attachment: fixed;
+  height: 80vh;
+}
+ 

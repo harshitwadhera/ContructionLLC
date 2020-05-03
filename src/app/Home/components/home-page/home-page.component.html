@@ -32,7 +32,7 @@
 
 
 </div> -->
-<section>
+<section class="aboutUs-Section">
 <div >
 <div #aboutUs id="aboutUs" class="container-fluid text-center aboutUs" style="padding-top:100px;padding-bottom:100px">
   <h1>WHO WE ARE</h1>
@@ -109,7 +109,7 @@
     <p>Home page text: <input type="text" [(ngModel)]="bodyText" /></p>
     <button (click)="closeModal('custom-modal-1');">Close</button>
 </app-cust-feedback> -->
- 
+
 <section class="Customers-Testimoni"  id="Customers-Testimoni">
   <div class="container">
     <div class="row customer-testi-Header">
@@ -162,30 +162,106 @@
 
 </section>
 
-<!-- <section class="Customers-Testimoni">
 
-  <div class="row customer-testi-Header">
-    <h2>Our Happy Customers</h2>
-  </div>
+
+<section class="contactUs"  id="contactUs">
   <div class="container">
+    <!-- <div class="row customer-testi-Header">
+      <h2>Get in Touch</h2>
+    </div> -->
     <div class="row">
-      <div class="col-sm">
-        <blockquote>
-          <i class="fas fa-quote-left"></i> I am very satisfied with the service they provide and the best part is they also give solution to problems.
 
-        </blockquote>
-        <title>Albert</title>
-      </div>
       <div class="col-sm">
-        One of three columns
+       
+        <div class="contactdetails">
+
+        </div>
+
       </div>
+
+
       <div class="col-sm">
-        One of three columns
+<!--(ngSubmit)="onSubmit()"-->
+<div class="customer-testi-Header">
+  <h2>Get in Touch</h2>
+</div> 
+        <form [formGroup]="contactForm"  (ngSubmit)="onSubmit()">
+          
+
+        <div class="form-group">
+          
+          <input type="text" formControlName="contactFormName" id="defaultContactFormName" 
+          class="form-control" placeholder="Name" [ngClass]="{ 'is-invalid': submitted && f.contactFormName.errors }">
+          <div *ngIf="submitted && f.contactFormName.errors" class="invalid-feedback">
+            <div *ngIf="f.contactFormName.errors.required"> Name is required</div>
+        </div>
       </div>
-    </div>
+
+           <!-- Email -->
+  
+
+  <div class="form-group">
+          
+    <input type="email" formControlName="contactFormEmail" id="defaultContactFormEmail" 
+    class="form-control" placeholder="E-mail" [ngClass]="{ 'is-invalid': submitted && f.contactFormEmail.errors }">
+    <div *ngIf="submitted && f.contactFormEmail.errors" class="invalid-feedback">
+      <div *ngIf="f.contactFormEmail.errors.required"> Email is required</div>
+      <div *ngIf="f.contactFormEmail.errors.email">Please Enter a valid Email Address </div>
   </div>
+</div>
 
-</section>  -->
+<div class="form-group">
+          
+  <select formControlName="neededService" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.contactFormEmail.errors }">
+    <option value="" disabled selected>Choose Needed Services</option>
+    <option value="Interior" selected>Interior</option>
+    <option value="Wooden">Wooden</option>
+    <option value="Exterior">Exterior</option>
+    <option value="Plumbing">Plumbing</option>
+  </select>
+   <div *ngIf="submitted && f.neededService.errors" class="invalid-feedback">
+    <div *ngIf="f.neededService.errors.required"> Please Select Service</div>
+</div>
+</div>
+
+
+<div class="form-group">
+          
+  <input formControlName="budget" id="budget"  type="number" 
+  class="form-control" placeholder="Please Enter your Budget AED" [ngClass]="{ 'is-invalid': submitted && f.budget.errors }">
+   <div *ngIf="submitted && f.budget.errors" class="invalid-feedback">
+    <div *ngIf="f.budget.errors.required"> Budget is required</div>
+    <div *ngIf="f.budget.errors.pattern"> Please enter only number</div>
+    
+    
+</div>
+</div>
+  
+<div class="form-group">
+          
+  
+  <textarea formControlName="message" id="message" 
+  class="form-control" placeholder="Please type your Message in Details" [ngClass]="{ 'is-invalid': submitted && f.message.errors }"></textarea>
+    <div *ngIf="submitted && f.message.errors" class="invalid-feedback">
+    <div *ngIf="f.message.errors.required"> Please type your Message</div>
+</div>
+</div>
+  
+
+
+  <button class="btn btn-outline-success"
+     type="submit" [disabled]="contactForm.invalid">Submit</button>
+
+          </form>
+       
+       
+      </div>
+    
+     
+    </div>
+    </div>
+
+</section>
 
 <app-footer></app-footer>
 </body>

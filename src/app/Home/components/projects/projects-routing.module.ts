@@ -6,7 +6,7 @@ import { ProjectsComponent } from './projects.component';
 
 const routes: Routes = [
   
-{path: '', component: ProjectsComponent}
+{path: 'projects', component: ProjectsComponent}
 ];
 
 @NgModule({

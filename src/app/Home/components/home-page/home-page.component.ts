@@ -5,6 +5,7 @@ import {MatDialog} from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material';
 import { CustFeedbackComponent } from '../cust-feedback/cust-feedback.component';
 import { CustFeebackModule } from '../cust-feedback/cust-feedback.module';
+import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 
 
 @Component({
@@ -15,10 +16,18 @@ import { CustFeebackModule } from '../cust-feedback/cust-feedback.module';
 export class HomePageComponent implements OnInit {
   aboutUsHome: any;
   moreAbout: any;
+  contactForm:FormGroup;
+  submitted = false;
 
-
-  constructor(private httpClient: HttpClient,public dialog: MatDialog) { 
+  constructor(private httpClient: HttpClient,public dialog: MatDialog,private fb:FormBuilder) { 
     //this.openDialog();
+    this.contactForm = fb.group({
+      'contactFormName': ['', Validators.required],
+      'contactFormEmail': ['',[Validators.required, Validators.email]],
+     'neededService': ['', Validators.required],
+     'budget': ['', Validators.required],
+     'message': ['', [Validators.required,Validators.minLength(3)]],
+      });
   }
 
   ngOnInit() {
@@ -38,6 +47,19 @@ export class HomePageComponent implements OnInit {
 
    
   }
+
+onSubmit(){
+  this.submitted = true;
+
+  // stop here if form is invalid
+  if (this.contactForm.invalid) {
+      return;
+  }
+
+  alert('SUCCESS!! :-)')
+}
+ 
+  get f() { return this.contactForm.controls; }
 
   openDialog(){
     let dialogRef = this.dialog.open(CustFeedbackComponent, {
