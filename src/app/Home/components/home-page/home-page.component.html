@@ -1,4 +1,6 @@
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
+ 
+  
 <app-header></app-header>
 
 <router-outlet></router-outlet>
@@ -32,11 +34,11 @@
 
 
 </div> -->
-<section class="aboutUs-Section">
+<section #aboutUs class="aboutUs-Section">
 <div >
-<div #aboutUs id="aboutUs" class="container-fluid text-center aboutUs" style="padding-top:100px;padding-bottom:100px">
+<div  id="aboutUs" class="container-fluid text-center aboutUs" style="padding-top:100px;padding-bottom:100px">
   <h1>WHO WE ARE</h1>
-  <p>
+  <p class="js--wp-1">
     {{aboutUsHome}}</p>
   
 </div>
@@ -73,7 +75,7 @@
   </div> -->
 
   <section>
-  <div id="WhatWeDo" class="view" class=""  >
+  <div id="WhatWeDo" class="view" class=""   >
   <div class="container">
     <div class="row">
       <div class="col-sm-8">
@@ -164,7 +166,7 @@
 
 
 
-<section class="contactUs"  id="contactUs">
+<section #contactUs class="contactUs"  id="contactUs">
   <div class="container">
     <!-- <div class="row customer-testi-Header">
       <h2>Get in Touch</h2>
@@ -173,7 +175,7 @@
 
       <div class="col-sm">
        
-        <div class="contactdetails">
+        <div class="contactdetails js--wp-2">
           <div class="container note">
             <div class="row rowInContactUs">
               

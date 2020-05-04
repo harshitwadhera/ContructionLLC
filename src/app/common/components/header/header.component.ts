@@ -33,10 +33,14 @@ export class HeaderComponent implements OnInit {
   }
 
   scrollToElement($element): void {
-    console.log($element);
-   // const element = document.querySelector("aboutUs")
    
-    let element = document.getElementsByClassName('aboutUs')
+   // const element = document.querySelector("aboutUs")
+   let elementName = $element.toString();
+  
+    let element = document.getElementsByClassName(elementName);
+    if(elementName=='aboutUs'){
+      element[0];
+     }
     element[0].scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
   }
 
@@ -54,6 +58,8 @@ export class HeaderComponent implements OnInit {
   
    
   }
+
+  
   
 
 }

@@ -62,19 +62,25 @@ h5 {
 }
 
 
-@keyframes fadeInDown {
+@-webkit-keyframes fadeInDown {
   from {
       opacity:0;
-      -webkit-transform: translatey(-10px);
-      -moz-transform: translatey(-10px);
-      -o-transform: translatey(-10px);
       transform: translatey(-10px);
   }
   to {
       opacity:1;
-      -webkit-transform: translatey(0);
-      -moz-transform: translatey(0);
-      -o-transform: translatey(0);
+      transform: translatey(0);
+  }
+}
+
+
+@keyframes fadeInDown {
+  from {
+      opacity:0;
+      transform: translatey(-10px);
+  }
+  to {
+      opacity:1;
       transform: translatey(0);
   }
 }
@@ -82,8 +88,10 @@ h5 {
 
 .w3-animate-top{
   position:relative;
-  animation:animatetop 3s
+  -webkit-animation:animatetop 3s;
+          animation:animatetop 3s
 }
+@-webkit-keyframes animatetop{from{top:-300px;opacity:0} to{top:0;opacity:1}}
 @keyframes animatetop{from{top:-300px;opacity:0} to{top:0;opacity:1}}
 
 .upgrade{
@@ -170,6 +178,11 @@ font-size: 50px;
     padding: 20px 20px 20px 20px; 
   }
 
+  .contactdetails{
+    background-attachment: initial;
+    padding:10px 0 0 0;
+  }
+
 }
 
 
@@ -180,6 +193,7 @@ font-size: 50px;
   color: #fff;
   background-attachment: fixed;
   height: 80vh;
+  
 }
 
 .location{
@@ -214,3 +228,27 @@ font-size: 50px;
  
 }
  
+
+/* ----------------------------------------------- */
+/* Animations */
+/* ----------------------------------------------- */
+
+// .js--wp-1,
+// .js--wp-2,
+// .js--wp-3
+// {
+//     opacity: 0;
+//     -webkit-animation-duration: 1s;
+//     animation-duration: 1s;
+// }
+
+// .js--wp-4 {
+//     -webkit-animation-duration: 1s;
+//     animation-duration: 1s;
+// }
+
+// .js--wp-1.animated,
+// .js--wp-2.animated,
+// .js--wp-3.animated {
+//     opacity: 1;
+// }

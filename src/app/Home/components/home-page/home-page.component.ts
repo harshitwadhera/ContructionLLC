@@ -11,7 +11,7 @@ import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
-  styleUrls: ['./home-page.component.scss']
+  styleUrls: ['./home-page.component.scss'],
 })
 export class HomePageComponent implements OnInit {
   aboutUsHome: any;
@@ -33,7 +33,21 @@ export class HomePageComponent implements OnInit {
   ngOnInit() {
     (function ($) {
       $(document).ready(function(){
-      
+        $('.js--wp-1').waypoint(function(direction) {
+          //$('.js--wp-1').addClass('animated fadeIn').delay(10000).fadeIn('slow');
+          $(".js--wp-1").fadeOut(100);
+          $(".js--wp-1").fadeIn(2000);
+        //  $(".circle-1").delay(500).fadeIn('slow');
+      }, {
+          offset: '50%'
+      });
+
+      $('.js--wp-2').waypoint(function(direction) {
+        $('.js--wp-2').addClass('animated fadeInLeft');
+    }, {
+        offset: '50%'
+    });
+    
       });
     })(jQuery)
     console.log("test");
